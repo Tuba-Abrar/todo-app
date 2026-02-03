@@ -13,7 +13,7 @@ useEffect(()=>{
 
     const handleSignUp= async()=>{
             console.log(userData);
-        let result= await fetch('https://todo-app-dext.vercel.app//signup',{
+        let result= await fetch('https://todo-app-dext.vercel.app/signup',{
             method:'Post',
             body:JSON.stringify(userData),
             headers:{

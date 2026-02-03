@@ -14,7 +14,7 @@ function Home() {
   const fetchTodos = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3200/tasks", { withCredentials: true });
+      const res = await axios.get("https://todo-app-dext.vercel.app/tasks", { withCredentials: true });
       setTodos(res.data.result);
       setError(null);
     } catch {
@@ -29,7 +29,7 @@ function Home() {
   const addTodo = async () => {
     if (!newTodo) return;
     try {
-      const res = await axios.post("http://localhost:3200/add-task", { text: newTodo, completed: false }, { withCredentials: true });
+      const res = await axios.post("https://todo-app-dext.vercel.app/add-task", { text: newTodo, completed: false }, { withCredentials: true });
       setTodos([...todos, res.data.result]);
       setNewTodo("");
     } catch {
@@ -40,7 +40,7 @@ function Home() {
   const toggleTodo = async (id) => {
     const todo = todos.find((t) => t._id === id);
     try {
-      const res = await axios.put("http://localhost:3200/update-task", { ...todo, completed: !todo.completed }, { withCredentials: true });
+      const res = await axios.put("https://todo-app-dext.vercel.app/update-task", { ...todo, completed: !todo.completed }, { withCredentials: true });
       setTodos(todos.map((t) => (t._id === id ? res.data.result : t)));
     } catch {
       setError("Failed to update todo");
@@ -49,7 +49,7 @@ function Home() {
 
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:3200/delete/${id}`, { withCredentials: true });
+      await axios.delete(`https://todo-app-dext.vercel.app/delete${id}`, { withCredentials: true });
       setTodos(todos.filter((t) => t._id !== id));
     } catch {
       setError("Failed to delete todo");
@@ -58,7 +58,7 @@ function Home() {
 
   const logout = async () => {
     try {
-      await axios.get("http://localhost:3200/logout", { withCredentials: true });
+      await axios.get("https://todo-app-dext.vercel.app/logout", { withCredentials: true });
       toast.success("Logged out");
       navigate("/login");
     } catch {

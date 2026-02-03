@@ -14,7 +14,7 @@ import { useNavigate, useParams } from 'react-router-dom';
     },[])
 
    const getTask = async(id)=>{
-    let task= await fetch(`https://todo-app-dext.vercel.app//task/`+id);
+    let task= await fetch(`https://todo-app-dext.vercel.app/task/`+id);
     task = await task.json()
     if(task.result){
         setTaskData(task.result)
@@ -23,7 +23,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
    const updateTask= async ()=>{
     console.log("function called",taskData);
-    let task = await fetch("https://todo-app-dext.vercel.app//update-task",{
+    let task = await fetch("https://todo-app-dext.vercel.app/update-task",{
         method:'put',
         body:JSON.stringify(taskData),
         headers:{

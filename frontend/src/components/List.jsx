@@ -14,7 +14,7 @@ export default function List() {
     // Fetch all tasks
     const getListData = async () => {
         try {
-            let res = await fetch('https://todo-app-dext.vercel.app//tasks', {
+            let res = await fetch('https://todo-app-dext.vercel.app/tasks', {
                 credentials: 'include'
             });
             res = await res.json();
@@ -32,7 +32,7 @@ export default function List() {
     // Delete single task
     const deleteTask = async (id) => {
         try {
-            let res = await fetch('https://todo-app-dext.vercel.app//delete/' + id, {
+            let res = await fetch('https://todo-app-dext.vercel.app/delete' + id, {
                 method: 'DELETE',
                 credentials: 'include'
             });
