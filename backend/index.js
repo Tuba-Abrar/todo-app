@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+      
       "https://todo-app-omega-one-79.vercel.app"
     ],
     credentials: true,
@@ -215,6 +215,9 @@ function verifyJWTToken(req, resp, next) {
     next();
   });
 }
+app.get("/",(req , res) =>  {
+  res.send("server is running");
+})
 
 /* ---------- SERVER ---------- */
 app.listen(3200, () => {
