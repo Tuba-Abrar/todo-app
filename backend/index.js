@@ -10,15 +10,19 @@ const app = express();
 /* ---------- MIDDLEWARES ---------- */
 app.use(express.json());
 
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://todo-app-omega-one-79.vercel.app"
+    ],
     credentials: true,
   })
 );
 
-app.use(cookieParser());
 
+app.use(cookieParser());
 
 /* ---------- AUTH ROUTES ---------- */
 
