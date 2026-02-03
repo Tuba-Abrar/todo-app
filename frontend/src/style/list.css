@@ -1,0 +1,104 @@
+/* Page background */
+body {
+    background-color: #f4f6fb;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.list-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #b5cdd1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.list-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Delete button */
+.delete-multiple {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.delete-multiple:hover {
+    background-color: #e63939;
+}
+
+/* Task list grid */
+.task-list {
+    display: grid;
+    grid-template-columns: 60px 70px 1.5fr 1.5fr 1fr;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header row */
+.list-header {
+    font-weight: bold;
+    background-color: #eef1f8;
+    padding: 10px;
+    border-radius: 6px;
+    color: #555;
+}
+
+/* Task row */
+.list-item {
+    background-color: #f9fafc;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+/* Hover effect */
+.list-item:hover {
+    background-color: #eef2ff;
+}
+
+/* Buttons */
+.delete-item {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.delete-item:hover {
+    background-color: #fa5252;
+}
+
+.update-item {
+    background-color: #4dabf7;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.update-item:hover {
+    background-color: #339af0;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
