@@ -24,7 +24,7 @@ app.use(
 
 app.use(cookieParser());
 
-/* ---------- AUTH ROUTES ---------- */
+//routes
 
 // LOGIN
 app.post("/login", async (req, resp) => {
@@ -219,6 +219,6 @@ app.get("/",(req , res) =>  {
   res.send("server is running");
 })
 
-/* ---------- SERVER ---------- */
+
 
  module.exports = app;
